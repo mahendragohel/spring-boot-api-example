@@ -15,9 +15,10 @@ pipeline {
                 sh './gradlew test'
             }
         }
-
         stage('Build Image'){
-            docker.build('spring-boot-api:{env.BUILD_ID}');
+            steps{
+                docker.build('spring-boot-api:{env.BUILD_ID}');
+            }
         }
     }
 }
