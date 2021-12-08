@@ -18,9 +18,7 @@ pipeline {
         }
         stage('Build Docker Image'){
             steps{
-                steps {
-                    sh 'docker build -t mahendragohel/springboot-api-example:latest .'
-                }
+                sh 'docker build -t mahendragohel/springboot-api-example:latest .'
             }
         }
         stage('Push Docker image') {
