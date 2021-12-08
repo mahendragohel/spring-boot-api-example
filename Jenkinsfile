@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Docker Image'){
             steps{
-                sh "docker build -t springboot-api-example:${env.BUILD_ID} ."
+                sh "docker build -t mahendragohel/springboot-api-example:${env.BUILD_ID} ."
             }
         }
         stage('Push Docker image') {
