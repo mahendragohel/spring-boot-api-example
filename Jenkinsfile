@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Docker Image'){
             steps{
-                sh 'docker build -t mahendragohel/springboot-api-example:latest .'
+                sh 'docker build -t springboot-api-example:latest .'
             }
         }
         stage('Push Docker image') {
@@ -26,7 +26,7 @@ pipeline {
                 DOCKER_HUB_LOGIN = credentials('docker-hub')
             }
             steps {
-                sh 'docker push mahendragohel/springboot-api-example:latest'
+                sh 'docker push springboot-api-example:latest'
             }
         }
     }
