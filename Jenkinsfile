@@ -26,7 +26,7 @@ pipeline {
                 DOCKER_HUB_LOGIN = credentials('docker-hub')
             }
             steps {
-                sh 'docker push -t mahendragohel/springboot-api-example:latest .'
+                sh 'docker push mahendragohel/springboot-api-example:latest'
             }
         }
     }
