@@ -18,7 +18,7 @@ pipeline {
         stage('Build Image'){
             steps{
                 script {
-                    docker.build('spring-boot-api:${env.BUILD_ID}');
+                    docker.build("spring-boot-api:${env.BUILD_ID}");
                 }
             }
         }
